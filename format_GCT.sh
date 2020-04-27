@@ -3,7 +3,7 @@
 ## Script to convert DESeq2 normalized counts to GCT format
 ## Made using following code:
 ## write.table(norm_counts, file="norm_counts.txt", 
-## append = TRUE, sep="\t", row.names = TRUE, 
+## append = TRUE, sep="\t", row.names = TRUE,
 ## col.names = TRUE, quote = FALSE)
 
 if [ "$1" == "-h" ]; then
