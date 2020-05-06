@@ -5,6 +5,10 @@
 ## write.table(norm_counts, file="norm_counts.txt", 
 ## append = TRUE, sep="\t", row.names = TRUE,
 ## col.names = TRUE, quote = FALSE)
+## N.B this will produce a rownames col 
+## without a col ID, thus all sample colnames
+## are shifted one place to the left.
+
 
 if [ "$1" == "-h" ]; then
   echo "Usage: bash `basename $0` [FILE] [OUT_PREFIX]"
