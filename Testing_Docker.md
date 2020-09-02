@@ -11,3 +11,12 @@ docker start -t -a ${hash_given_above}
 This bypasses the need to push to docker hub. 
 
 Images are stored under /var/lib/docker/image/overlay2/imagedb/content/sha256/ i think, must sudo chmod -R 777 the dirs to access
+
+
+######
+
+docker build -t barryd237/repo
+
+docker run <your_username>/my-first-repo
+
+docker push <your_username>/my-first-repo
