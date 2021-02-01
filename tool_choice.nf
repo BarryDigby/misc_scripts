@@ -42,6 +42,13 @@ def defineToolList() {
         ]
 }
 
+
+// check tool list length (are they using one or more tools?) 
+def checkToolListLength(it) {
+
+	println it.size()
+}
+
 // set up some test processes
 
 process a {
@@ -52,7 +59,7 @@ process a {
 	output:
 	stdout to outa
 
-	when: ('ciriquant' in tool || 'combine' in tool)
+	when: ('ciriquant' || 'circexplorer2' in tool)
 	
 	script:
 	"""
@@ -88,4 +95,13 @@ process c {
 	"""
 	echo "process C"
 	"""
+}
+
+println tool.size()
+
+
+if('dcc' in tool){
+	println 'FOO'
+}else{
+	println 'BAR'
 }
