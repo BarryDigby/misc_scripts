@@ -1,0 +1,10 @@
+## paste two columns together, and inject a string. used for target scan species insertion. 
+
+## e.g: 
+##       id                                         seq
+## I:10266683-10266910:-	AAGATCACTGGATTGTTCAAGAAATCACCATCACATCTTGATTATCCAAT
+
+paste id seq | awk '{printf("%s\t0000\t%s\n", $1, $2);}'
+
+## gives 
+## I:10266683-10266910:-   0000  	AAGATCACTGGATTGTTCAAGAAATCACCATCACATCTTGATTATCCAAT
